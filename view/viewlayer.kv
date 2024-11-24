@@ -1,0 +1,131 @@
+
+##############################################################################
+<ViewLayer>:
+    padding: 5
+    spacing: 5
+    cols: 2
+
+    ActivityBar:
+        size_hint_x: None
+        width: 32
+
+    ScreenManagerContainer:
+        id: id_screen_container
+        ScreenFindDuplicates:
+        ScreenFilenameChange:
+        ScreenInfo:
+        ScreenConfiguration:
+
+
+##############################################################################        
+<ActivityBar>:
+    cols: 1
+        
+    BackupSystemControl_ButtonOver:	
+        background_normal: "./view/images/FolderClose.32.png"
+        background_down: "./view/images/FolderClose.32.png"
+        on_press: app.root.ids.id_screen_container.current = "screen_find_duplicates"
+    BackupSystemControl_Space:
+    
+    BackupSystemControl_ButtonOver:	
+        background_normal: "./view/images/FilenameChange.32.png"
+        background_down: "./view/images/FilenameChange.32.png"
+        on_press: app.root.ids.id_screen_container.current = "screen_filename_change"
+    BackupSystemControl_Space:
+    
+    BackupSystemControl_ButtonOver:	
+        background_normal: "./view/images/Info.32.png"
+        background_down: "./view/images/Info.32.png"
+        on_press: app.root.ids.id_screen_container.current = "screen_info"
+    BackupSystemControl_Space:
+    
+    BackupSystemControl_ButtonOver:
+        background_normal: "./view/images/Settings.32.png"
+        background_down: "./view/images/Settings.32.png"
+        on_press: app.root.ids.id_screen_container.current = "screen_configuration"
+    BackupSystemControl_Space:
+
+##############################################################################
+
+<BackupSystemControl_ButtonOver@ButtonOver>:
+    size_hint: None, None
+    width: 32
+    height: 32
+    text_size: self.size
+    halign: "center"
+    valign: "center"
+    opacity: 0.6
+
+<BackupSystemControl_Space@Label>:
+    size_hint: None, None
+    width: 32
+    height: 16
+    text_size: self.size
+    size: self.size
+    halign: "center"
+    valign: "center"
+
+
+###############################################################################        
+###############################################################################        
+<ScreenFindDuplicates>:
+    name: "screen_find_duplicates"
+    GridLayout:
+        cols: 1 
+        canvas.before:
+            Color:
+                rgb: 0.2, 0.2, 0.2, 1.0
+            Rectangle:
+                pos: self.pos
+                size: self.size
+        Label:
+            text: "screen_find_duplicates"
+
+
+###############################################################################        
+###############################################################################        
+<ScreenFilenameChange>:
+    name: "screen_filename_change"
+    GridLayout:
+        cols: 1 
+        canvas.before:
+            Color:
+                rgb: 0.2, 0.2, 0.2, 1.0
+            Rectangle:
+                pos: self.pos
+                size: self.size
+        Label:
+            text: "screen_filename_change"
+
+
+###############################################################################        
+###############################################################################        
+<ScreenInfo>:
+    name: "screen_info"
+    GridLayout:
+        cols: 1 
+        canvas.before:
+            Color:
+                rgb: 0.2, 0.2, 0.2, 1.0
+            Rectangle:
+                pos: self.pos
+                size: self.size
+        Label:
+            text: "screen_info"
+
+
+###############################################################################        
+###############################################################################        
+<ScreenConfiguration>:
+    name: "screen_configuration"
+    GridLayout:
+        cols: 1 
+        canvas.before:
+            Color:
+                rgb: 0.2, 0.2, 0.2, 1.0
+            Rectangle:
+                pos: self.pos
+                size: self.size
+        Label:
+            text: "screen_configuration"
+
