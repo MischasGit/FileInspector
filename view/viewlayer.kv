@@ -31,18 +31,21 @@
         background_normal: "./view/images/FilenameChange.32.png"
         background_down: "./view/images/FilenameChange.32.png"
         on_press: app.root.ids.id_screen_container.current = "screen_filename_change"
+        tooltip_set: "Filename change"
     BackupSystemControl_Space:
     
     BackupSystemControl_ButtonOver:	
         background_normal: "./view/images/Info.32.png"
         background_down: "./view/images/Info.32.png"
         on_press: app.root.ids.id_screen_container.current = "screen_info"
-    BackupSystemControl_Space:
+        tooltip_set: "Info"
+    BackupSystemControl_SpaceBig:
     
     BackupSystemControl_ButtonOver:
         background_normal: "./view/images/Settings.32.png"
         background_down: "./view/images/Settings.32.png"
         on_press: app.root.ids.id_screen_container.current = "screen_configuration"
+        tooltip_set: "Settings"
     BackupSystemControl_Space:
 
 ##############################################################################
@@ -55,7 +58,7 @@
     halign: "center"
     valign: "center"
     opacity: 0.6
-
+    
 <BackupSystemControl_Space@Label>:
     size_hint: None, None
     width: 32
@@ -65,6 +68,14 @@
     halign: "center"
     valign: "center"
 
+<BackupSystemControl_SpaceBig@Label>:
+    size_hint: None, None
+    width: 32
+    height: 128
+    text_size: self.size
+    size: self.size
+    halign: "center"
+    valign: "center"
 
 ###############################################################################        
 ###############################################################################        

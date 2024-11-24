@@ -7,7 +7,7 @@ from kivy.uix.scrollview import ScrollView
 kv = """
 <Cell>:
     size_hint: (None, None)
-    width: 400
+    width: 200
     height: 60
     canvas.before:
         Color:
@@ -26,7 +26,7 @@ kv = """
     do_scroll_y: True
     GridLayout:
         id: grid
-        cols: 15
+        cols: 2
         rows: 30
         size_hint: (None, None)
         width: self.minimum_width
